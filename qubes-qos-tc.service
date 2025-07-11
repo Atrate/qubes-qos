@@ -1,0 +1,22 @@
+[Unit]
+Description=Qubes QOS Traffic Control
+After=default.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RemainAfterExit=yes
+ExecStart=/usr/bin/qubes-qos-tc.sh
+# Sleep for 30 seconds to *really* make sure the VPN interfaces are up by the
+# time we apply the tc rules, as we only do that once, on system start
+ExecStartPre=/usr/bin/sleep 30
+TimeoutStartSec=0
+
+# Hardening
+RestrictSUIDSGID=true
+ProtectHome=yes
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,19 @@
+[Unit]
+Description=Qubes QOS Mangle
+After=default.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RemainAfterExit=yes
+ExecStart=/usr/bin/qubes-qos-mangle.sh
+TimeoutStartSec=0
+
+# Hardening
+RestrictSUIDSGID=true
+ProtectHome=yes
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=default.target
