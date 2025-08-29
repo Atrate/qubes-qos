@@ -74,6 +74,10 @@ around in the following ways:
    entering the qube will get handled by the `tc` script, and the traffic
    leaving the qube will have a static DSCP value set by the `mangle` script.
 
+## Other Utilities
+
+See [the qubes-utils repo](https://github.com/Atrate/qubes-utils) for links to other utilities I've written for Qubes.
+
 ## License
 
 This project is licensed under the [AGPL-3.0-or-later](https://www.gnu.org/licenses/agpl-3.0.html).
