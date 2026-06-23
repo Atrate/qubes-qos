@@ -2,6 +2,8 @@
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.en.html) 
 
+WARNING: For now it's not recommended to use this script if you leave your ProxyVMs running for days at a time (see: https://github.com/Atrate/qubes-qos/issues/1). PRs to fix this issue are welcome.
+
 ## Description
 
 This script is designed for QubesOS. It allows the user to "easily" prioritise
