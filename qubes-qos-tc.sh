@@ -221,7 +221,7 @@ main()
 
     # Modprobe modules, just in case
     # ------------------------------
-    modprobe sch_prio sch_fq_codel cls_u32
+    modprobe -a sch_prio sch_fq_codel cls_u32
 
     # Delete existing prio mappings
     # -----------------------------
